@@ -1,13 +1,27 @@
 .hero-section {
-  background-image: url("ChatGPT Image Jul 16, 2025, 05_20_48 PM.png");  /* no spaces, match exactly */
+  background-image: url('ChatGPT Image Jul 18, 2025, 02_55_09 PM.png'); 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  min-height: 400px;
+  position: relative;
+  min-height: 60vh;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 60px 20px;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
 }

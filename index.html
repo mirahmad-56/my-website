@@ -7,6 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="new.css" rel="stylesheet">
+    <script src="index.js"></script>
   </head>
   <body>
 
@@ -31,6 +32,11 @@
             <li class="nav-item">
               <a class="nav-link" href="login.html">Login</a>
             </li>
+            <li class="nav-item" id="feedbackNav" >
+
+             <a class="nav-link" href="feedback.html">Feedback</a>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -76,6 +82,14 @@
         </div>
       </div>
     </div>
+    <script>
+  if (localStorage.getItem('isLoggedIn') === 'true') {
+    document.getElementById('feedbackNav').style.display = 'block';
+  }
+</script>
+
+
+
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
       <p>&copy; 2025 EduSite. All rights reserved.</p>

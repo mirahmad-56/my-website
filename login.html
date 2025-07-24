@@ -81,6 +81,33 @@
         <button type="submit" class="btn btn-primary w-100">Log In</button>
       </form>
     </div>
+<script>
+  
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    
+
+    localStorage.setItem("isLoggedIn", "true");
+
+    
+    const redirectTo = localStorage.getItem("redirectTo");
+
+    if (redirectTo) {
+      
+      localStorage.removeItem("redirectTo");
+      window.location.href = redirectTo;
+    } else {
+      
+      document.body.innerHTML = `
+        <div class="container text-center mt-5">
+          <h2 class="text-success">Thank you for logging in!</h2>
+          <a href="index.html" class="btn btn-primary mt-3">Go to Home</a>
+        </div>
+      `;
+    }
+  });
+</script>
 
     <footer class="bg-dark text-white text-center py-3">
       <p class="mb-0">&copy; 2025 EduSite. All rights reserved.</p>

@@ -1,15 +1,17 @@
 .hero-section {
-  background-image: url('ChatGPT Image Jul 18, 2025, 02_55_09 PM.png'); 
+  background-image: url('images/hero.png');
   background-size: cover;
   background-position: center;
+  height: 400px; 
   position: relative;
-  min-height: 60vh;
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
+  padding-top: 100px;
 }
+
+
+
 
 .hero-section::before {
   content: "";

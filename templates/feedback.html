@@ -16,7 +16,7 @@
     <script>
       if (localStorage.getItem('isLoggedIn') !== 'true') {
         alert('Access Denied. Please log in first.');
-        window.location.href = 'login.html';
+        window.location.href = '/';
       }
     </script>
 
@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="#">Feedback</a>
@@ -74,7 +74,7 @@
         </div>
 
         <div class="text-center mt-3">
-          <a href="index.html" class="btn btn-outline-secondary btn-sm">← Back to Home</a>
+          <a href="/" class="btn btn-outline-secondary btn-sm">← Back to Home</a>
         </div>
       </form>
     </div>
@@ -96,9 +96,9 @@
     <script>
   if (localStorage.getItem("isLoggedIn") !== "true") {
    
-    localStorage.setItem("redirectTo", "feedback.html");
+    localStorage.setItem("redirectTo", "/feedback");
     alert("Access Denied. Please log in first.");
-    window.location.href = "login.html";
+    window.location.href = "/login";
   }
 </script>
 

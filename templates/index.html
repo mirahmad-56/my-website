@@ -6,8 +6,11 @@
     <title>Educational Site</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="new.css" rel="stylesheet">
-    <script src="index.js"></script>
+ <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}">
+
+
+
+    
   </head>
   <body>
 
@@ -24,17 +27,17 @@
               <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="education.html">Education</a>
+              <a class="nav-link" href="/education">Education</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="help.html">Help</a>
+              <a class="nav-link" href="/help">Help</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
+              <a class="nav-link" href="/login">Login</a>
             </li>
             <li class="nav-item" id="feedbackNav" >
 
-             <a class="nav-link" href="feedback.html">Feedback</a>
+             <a class="nav-link" href="/feedback">Feedback</a>
             </li>
 
           </ul>
@@ -44,7 +47,7 @@
 
     
     <section class="hero-section">
-  <div class="container">
+       <div class="container">
     <h1 class="display-4">Welcome to EduSite</h1>
     <p class="lead">Learn Math, Science, Programming and more!</p>
   </div>
@@ -58,7 +61,7 @@
             <div class="card-body">
               <h5 class="card-title">Mathematics</h5>
               <p class="card-text">Algebra, Geometry, Calculus & more</p>
-              <a href="maths.html" class="btn btn-outline-primary">Start Learning</a>
+              <a href="/maths" class="btn btn-outline-primary">Start Learning</a>
             </div>
           </div>
         </div>
@@ -67,7 +70,7 @@
             <div class="card-body">
               <h5 class="card-title">Science</h5>
               <p class="card-text">Physics, Chemistry, Biology</p>
-              <a href="science.html" class="btn btn-outline-primary">Start Learning</a>
+              <a href="/science" class="btn btn-outline-primary">Start Learning</a>
             </div>
           </div>
         </div>
@@ -76,13 +79,13 @@
             <div class="card-body">
               <h5 class="card-title">Programming</h5>
               <p class="card-text">Python, HTML, Java & more</p>
-              <a href="programing.html" class="btn btn-outline-primary">Start Learning</a>
+              <a href="/programing" class="btn btn-outline-primary">Start Learning</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script>
+    <script src="{{ url_for('static', filename='js/index.js') }}">
   if (localStorage.getItem('isLoggedIn') === 'true') {
     document.getElementById('feedbackNav').style.display = 'block';
   }
